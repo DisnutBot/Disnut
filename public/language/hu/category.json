@@ -1,0 +1,20 @@
+{
+    "category": "Kategória",
+    "subcategories": "Alkategóriák",
+    "new_topic_button": "Új témakör",
+    "guest-login-post": "Lépj be a hozzászóláshoz",
+    "no_topics": "<strong>Nincs témakör a kategóriában.</strong>Miért nem próbálsz létrehozni egyet?",
+    "browsing": "böngészés",
+    "no_replies": "Nem érkezett válasz",
+    "no_new_posts": "Nincs új hozzászólás.",
+    "share_this_category": "Kategória megosztása",
+    "watch": "Figyelés",
+    "ignore": "Mellőzés",
+    "watching": "Figyelés",
+    "ignoring": "Mellőzés",
+    "watching.description": "Témakörök megjelenítése az olvasatlanok között",
+    "ignoring.description": "Témakörök ne jelenjenek meg az olvasatlanok között",
+    "watch.message": "Mostantól figyeled a kategória és minden alkategóriája frissítéseit",
+    "ignore.message": "Mostantól figyelmen kívül hagyod a kategória és minden alkategóriája frissítéseit",
+    "watched-categories": "Figyelt kategóriák"
+}
