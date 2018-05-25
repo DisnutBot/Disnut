@@ -48,4 +48,4 @@ It is important to ensure that your Disnut and database servers are secured. Bea
 
 ## License
 
-Disnut is licensed under the [**MIT**](LICENSE).
+Disnut is licensed under [**MIT**](LICENSE).
