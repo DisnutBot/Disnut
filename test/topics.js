@@ -1209,7 +1209,7 @@ describe('Topic\'s', function () {
 		before(function (done) {
 			async.parallel({
 				topic1: function (next) {
-					topics.post({ uid: adminUid, tags: ['php', 'nosql', 'psql', 'disnut'], title: 'topic title 1', content: 'topic 1 content', cid: topic.categoryId }, next);
+					topics.post({ uid: adminUid, tags: ['php', 'nosql', 'psql', 'nodebb'], title: 'topic title 1', content: 'topic 1 content', cid: topic.categoryId }, next);
 				},
 				topic2: function (next) {
 					topics.post({ uid: adminUid, tags: ['javascript', 'mysql', 'python', 'nodejs'], title: 'topic title 2', content: 'topic 2 content', cid: topic.categoryId }, next);
@@ -1249,7 +1249,7 @@ describe('Topic\'s', function () {
 		it('should search tags', function (done) {
 			socketTopics.searchTags({ uid: adminUid }, { query: 'no' }, function (err, data) {
 				assert.ifError(err);
-				['disnut', 'nodejs', 'nosql'].forEach(function (tag) {
+				['nodebb', 'nodejs', 'nosql'].forEach(function (tag) {
 					assert.notEqual(data.indexOf(tag), -1);
 				});
 				done();
@@ -1435,7 +1435,7 @@ describe('Topic\'s', function () {
 		it('should delete tags', function (done) {
 			socketAdmin.tags.create({ uid: adminUid }, { tag: 'emptytag2' }, function (err) {
 				assert.ifError(err);
-				socketAdmin.tags.deleteTags({ uid: adminUid }, { tags: ['emptytag', 'emptytag2', 'disnut', 'nodejs'] }, function (err) {
+				socketAdmin.tags.deleteTags({ uid: adminUid }, { tags: ['emptytag', 'emptytag2', 'nodebb', 'nodejs'] }, function (err) {
 					assert.ifError(err);
 					db.getObjects(['tag:emptytag', 'tag:emptytag2'], function (err, data) {
 						assert.ifError(err);
