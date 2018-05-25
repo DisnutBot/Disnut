@@ -150,7 +150,7 @@ describe('Build', function (done) {
 	it('should build client js bundle', function (done) {
 		build.build(['client js bundle'], function (err) {
 			assert.ifError(err);
-			var filename = path.join(__dirname, '../build/public/nodebb.min.js');
+			var filename = path.join(__dirname, '../build/public/disnut.min.js');
 			assert(file.existsSync(filename));
 			assert(fs.readFileSync(filename).length > 1000);
 			done();

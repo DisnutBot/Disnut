@@ -179,7 +179,7 @@ module.exports = function (app, middleware, hotswapIds, callback) {
 
 	// DEPRECATED
 	var deprecatedPaths = [
-		'/nodebb.min.js',
+		'/disnut.min.js',
 		'/acp.min.js',
 		'/stylesheet.css',
 		'/js-enabled.css',

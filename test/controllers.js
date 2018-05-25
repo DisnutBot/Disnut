@@ -531,8 +531,8 @@ describe('Controllers', function () {
 	});
 
 
-	it('should load nodebb.min.js', function (done) {
-		request(nconf.get('url') + '/assets/nodebb.min.js', function (err, res, body) {
+	it('should load disnut.min.js', function (done) {
+		request(nconf.get('url') + '/assets/disnut.min.js', function (err, res, body) {
 			assert.ifError(err);
 			assert.equal(res.statusCode, 200);
 			assert(body);

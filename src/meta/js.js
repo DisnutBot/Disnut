@@ -335,7 +335,7 @@ function getBundleScriptList(target, callback) {
 
 JS.buildBundle = function (target, fork, callback) {
 	var fileNames = {
-		client: 'nodebb.min.js',
+		client: 'disnut.min.js',
 		admin: 'acp.min.js',
 	};
 
