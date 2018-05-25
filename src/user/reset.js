@@ -79,7 +79,7 @@ UserReset.send = function (email, callback) {
 			UserReset.generate(uid, next);
 		},
 		function (code, next) {
-			translator.translate('[[email:password-reset-requested, ' + (meta.config.title || 'NodeBB') + ']]', meta.config.defaultLang, function (subject) {
+			translator.translate('[[email:password-reset-requested, ' + (meta.config.title || 'Disnut') + ']]', meta.config.defaultLang, function (subject) {
 				next(null, subject, code);
 			});
 		},

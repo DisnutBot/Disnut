@@ -553,7 +553,7 @@ Flags.update = function (flagId, uid, changeset, callback) {
 			tasks.push(async.apply(Flags.appendHistory, flagId, uid, changeset));
 
 			// Fire plugin hook
-			tasks.push(async.apply(plugins.fireHook, 'action:flag.update', { flagId: flagId, changeset: changeset, uid: uid }));	// delete @ NodeBB v1.6.0
+			tasks.push(async.apply(plugins.fireHook, 'action:flag.update', { flagId: flagId, changeset: changeset, uid: uid }));	// delete @ Disnut v1.6.0
 			tasks.push(async.apply(plugins.fireHook, 'action:flags.update', { flagId: flagId, changeset: changeset, uid: uid }));
 
 			async.parallel(tasks, function (err) {
@@ -701,7 +701,7 @@ Flags.notify = function (flagObj, uid, callback) {
 
 				plugins.fireHook('action:flag.create', {
 					flag: flagObj,
-				});	// delete @ NodeBB v1.6.0
+				});	// delete @ Disnut v1.6.0
 				plugins.fireHook('action:flags.create', {
 					flag: flagObj,
 				});
@@ -740,7 +740,7 @@ Flags.notify = function (flagObj, uid, callback) {
 
 				plugins.fireHook('action:flag.create', {
 					flag: flagObj,
-				});	// delete @ NodeBB v1.6.0
+				});	// delete @ Disnut v1.6.0
 				plugins.fireHook('action:flags.create', {
 					flag: flagObj,
 				});

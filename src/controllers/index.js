@@ -241,7 +241,7 @@ Controllers.robots = function (req, res) {
 
 Controllers.manifest = function (req, res) {
 	var manifest = {
-		name: meta.config.title || 'NodeBB',
+		name: meta.config.title || 'Disnut',
 		start_url: nconf.get('relative_path') + '/',
 		display: 'standalone',
 		orientation: 'portrait',

@@ -624,11 +624,11 @@ describe('User', function () {
 				username: 'updatedUserName',
 				email: 'updatedEmail@me.com',
 				fullname: 'updatedFullname',
-				website: 'http://nodebb.org',
+				website: 'http://disnut.ml',
 				location: 'izmir',
 				groupTitle: 'testGroup',
 				birthday: '01/01/1980',
-				signature: 'nodebb is good',
+				signature: 'disnut is good',
 			};
 			socketUser.updateProfile({ uid: uid }, data, function (err, result) {
 				assert.ifError(err);
@@ -1492,7 +1492,7 @@ describe('User', function () {
 		before(function (done) {
 			User.create({
 				username: 'inviter',
-				email: 'inviter@nodebb.org',
+				email: 'inviter@disnut.com',
 			}, function (err, uid) {
 				assert.ifError(err);
 				inviterUid = uid;
@@ -1540,7 +1540,7 @@ describe('User', function () {
 		});
 
 		it('should error if email exists', function (done) {
-			socketUser.invite({ uid: inviterUid }, 'inviter@nodebb.org', function (err) {
+			socketUser.invite({ uid: inviterUid }, 'inviter@disnut.com', function (err) {
 				assert.equal(err.message, '[[error:email-taken]]');
 				done();
 			});

@@ -292,7 +292,7 @@ define('settings', function () {
 						app.alert({
 							title: 'Settings Not Saved',
 							type: 'danger',
-							message: 'NodeBB failed to save the settings.',
+							message: 'Disnut failed to save the settings.',
 							timeout: 5000,
 						});
 					} else {

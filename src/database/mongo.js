@@ -54,7 +54,7 @@ mongoModule.questions = [
 	{
 		name: 'mongo:database',
 		description: 'MongoDB database name',
-		default: nconf.get('mongo:database') || 'nodebb',
+		default: nconf.get('mongo:database') || 'disnut',
 		ask: isUriNotSpecified,
 	},
 ];
@@ -78,7 +78,7 @@ function getConnectionString() {
 		nconf.set('mongo:port', 27017);
 	}
 	if (!nconf.get('mongo:database')) {
-		nconf.set('mongo:database', 'nodebb');
+		nconf.set('mongo:database', 'disnut');
 	}
 
 	var hosts = nconf.get('mongo:host').split(',');

@@ -504,7 +504,7 @@ describe('Controllers', function () {
 	});
 
 	it('should load tag rss feed', function (done) {
-		request(nconf.get('url') + '/tags/nodebb.rss', function (err, res, body) {
+		request(nconf.get('url') + '/tags/disnut.rss', function (err, res, body) {
 			assert.ifError(err);
 			assert.equal(res.statusCode, 200);
 			assert(body);
@@ -881,7 +881,7 @@ describe('Controllers', function () {
 				title: 'topic title',
 				content: 'test topic content',
 				cid: cid,
-				tags: ['nodebb', 'bug', 'test'],
+				tags: ['disnut', 'bug', 'test'],
 			}, function (err, result) {
 				assert.ifError(err);
 				tid = result.topicData.tid;
@@ -911,7 +911,7 @@ describe('Controllers', function () {
 		});
 
 		it('should render tag page with 1 topic', function (done) {
-			request(nconf.get('url') + '/api/tags/nodebb', { json: true }, function (err, res, body) {
+			request(nconf.get('url') + '/api/tags/disnut', { json: true }, function (err, res, body) {
 				assert.ifError(err);
 				assert.equal(res.statusCode, 200);
 				assert(body);
@@ -1854,14 +1854,14 @@ describe('Controllers', function () {
 		it('should redirect if category is a link', function (done) {
 			async.waterfall([
 				function (next) {
-					categories.create({ name: 'redirect', link: 'https://nodebb.org' }, next);
+					categories.create({ name: 'redirect', link: 'https://disnut.ml' }, next);
 				},
 				function (category, next) {
 					request(nconf.get('url') + '/api/category/' + category.slug, { jar: jar, json: true }, function (err, res, body) {
 						assert.ifError(err);
 						assert.equal(res.statusCode, 200);
-						assert.equal(res.headers['x-redirect'], 'https://nodebb.org');
-						assert.equal(body, 'https://nodebb.org');
+						assert.equal(res.headers['x-redirect'], 'https://disnut.ml');
+						assert.equal(body, 'https://disnut.ml');
 						next();
 					});
 				},
