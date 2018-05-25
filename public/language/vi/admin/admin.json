@@ -1,0 +1,7 @@
+{
+	"alert.confirm-rebuild-and-restart": "Are you sure you wish to rebuild and restart NodeBB?",
+	"alert.confirm-restart": "Bạn có thật sự muốn khởi động lại NodeBB",
+
+	"acp-title": "%1 | Bảng điểu khiển",
+	"settings-header-contents": "Nội dung"
+}

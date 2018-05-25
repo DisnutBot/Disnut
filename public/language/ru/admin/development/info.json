@@ -1,0 +1,18 @@
+{
+	"you-are-on": "Инфо - Вы находитесь на <strong>%1:%2</strong>",
+	"nodes-responded": "Узлов: %1. Время ответа %2мс!",
+	"host": "хост",
+	"pid": "pid",
+	"nodejs": "nodejs",
+	"online": "онлайн",
+	"git": "git",
+	"memory": "память",
+	"load": "загрузка",
+	"uptime": "время работы",
+
+	"registered": "Зарегистрированных",
+	"sockets": "Сокеты",
+	"guests": "Гостей",
+
+	"info": "Инфо"
+}
