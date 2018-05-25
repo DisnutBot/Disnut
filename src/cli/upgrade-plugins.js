@@ -211,7 +211,7 @@ function upgradePlugins(callback) {
 					callback(err, false);
 				});
 			} else {
-				console.log('Package upgrades skipped'.yellow + '. Check for upgrades at any time by running "'.reset + './nodebb upgrade -p'.green + '".'.reset);
+				console.log('Package upgrades skipped'.yellow + '. Check for upgrades at any time by running "'.reset + './disnut upgrade -p'.green + '".'.reset);
 				callback();
 			}
 		});

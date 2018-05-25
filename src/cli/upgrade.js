@@ -37,7 +37,7 @@ var steps = {
 		},
 	},
 	schema: {
-		message: 'Updating NodeBB data store schema...',
+		message: 'Updating Disnut data store schema...',
 		handler: function (next) {
 			async.series([
 				db.init,
@@ -68,7 +68,7 @@ function runSteps(tasks) {
 			throw err;
 		}
 
-		var message = 'NodeBB Upgrade Complete!';
+		var message = 'Disnut Upgrade Complete!';
 		// some consoles will return undefined/zero columns, so just use 2 spaces in upgrade script if we can't get our column count
 		var columns = process.stdout.columns;
 		var spaces = columns ? new Array(Math.floor(columns / 2) - (message.length / 2) + 1).join(' ') : '  ';
@@ -80,7 +80,7 @@ function runSteps(tasks) {
 }
 
 function runUpgrade(upgrades, options) {
-	console.log('\nUpdating NodeBB...'.cyan);
+	console.log('\nUpdating Disnut...'.cyan);
 	options = options || {};
 	// disable mongo timeouts during upgrade
 	nconf.set('mongo:options:socketTimeoutMS', 0);

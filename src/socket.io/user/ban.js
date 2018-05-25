@@ -105,7 +105,7 @@ module.exports = function (SocketUser) {
 				user.getUserField(uid, 'username', next);
 			},
 			function (username, next) {
-				var siteTitle = meta.config.title || 'NodeBB';
+				var siteTitle = meta.config.title || 'Disnut';
 				var data = {
 					subject: '[[email:banned.subject, ' + siteTitle + ']]',
 					username: username,

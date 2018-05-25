@@ -414,7 +414,7 @@ module.exports = function (db, module) {
 
 		db.collection('objects').findAndModify({ _key: key, value: value }, {}, { $inc: data }, { new: true, upsert: true }, function (err, result) {
 			// if there is duplicate key error retry the upsert
-			// https://github.com/NodeBB/NodeBB/issues/4467
+			// https://github.com/Disnut/Disnut/issues/4467
 			// https://jira.mongodb.org/browse/SERVER-14322
 			// https://docs.mongodb.org/manual/reference/command/findAndModify/#upsert-and-unique-index
 			if (err && err.message.startsWith('E11000 duplicate key error')) {

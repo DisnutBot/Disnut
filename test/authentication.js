@@ -72,7 +72,7 @@ describe('authentication', function () {
 	var jar = request.jar();
 	var regularUid;
 	before(function (done) {
-		user.create({ username: 'regular', password: 'regularpwd', email: 'regular@nodebb.org' }, function (err, uid) {
+		user.create({ username: 'regular', password: 'regularpwd', email: 'regular@disnut.com' }, function (err, uid) {
 			assert.ifError(err);
 			regularUid = uid;
 			done();
@@ -146,7 +146,7 @@ describe('authentication', function () {
 
 			request.post(nconf.get('url') + '/register', {
 				form: {
-					email: 'admin@nodebb.org',
+					email: 'admin@disnut.com',
 					username: 'admin',
 					password: 'adminpwd',
 					'password-confirm': 'adminpwd',
@@ -170,7 +170,7 @@ describe('authentication', function () {
 					assert.ifError(err);
 					assert(body);
 					assert.equal(body.username, 'admin');
-					assert.equal(body.email, 'admin@nodebb.org');
+					assert.equal(body.email, 'admin@disnut.com');
 					user.getSettings(body.uid, function (err, settings) {
 						assert.ifError(err);
 						assert.equal(settings.userLang, 'it');
@@ -210,7 +210,7 @@ describe('authentication', function () {
 				assert.ifError(err);
 				assert(body);
 				assert.equal(body.username, 'regular');
-				assert.equal(body.email, 'regular@nodebb.org');
+				assert.equal(body.email, 'regular@disnut.com');
 				db.getObject('uid:' + regularUid + ':sessionUUID:sessionId', function (err, sessions) {
 					assert.ifError(err);
 					assert(sessions);
@@ -394,9 +394,9 @@ describe('authentication', function () {
 
 
 	it('should be able to login with email', function (done) {
-		user.create({ username: 'ginger', password: '123456', email: 'ginger@nodebb.org' }, function (err) {
+		user.create({ username: 'ginger', password: '123456', email: 'ginger@disnut.com' }, function (err) {
 			assert.ifError(err);
-			loginUser('ginger@nodebb.org', '123456', function (err, response) {
+			loginUser('ginger@disnut.com', '123456', function (err, response) {
 				assert.ifError(err);
 				assert.equal(response.statusCode, 200);
 				done();
@@ -406,7 +406,7 @@ describe('authentication', function () {
 
 	it('should fail to login if login type is username and an email is sent', function (done) {
 		meta.config.allowLoginWith = 'username';
-		loginUser('ginger@nodebb.org', '123456', function (err, response, body) {
+		loginUser('ginger@disnut.com', '123456', function (err, response, body) {
 			meta.config.allowLoginWith = 'username-email';
 			assert.ifError(err);
 			assert.equal(response.statusCode, 500);

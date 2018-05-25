@@ -12,7 +12,7 @@ var categoriesController = module.exports;
 categoriesController.list = function (req, res, next) {
 	res.locals.metaTags = [{
 		name: 'title',
-		content: String(meta.config.title || 'NodeBB'),
+		content: String(meta.config.title || 'Disnut'),
 	}, {
 		property: 'og:type',
 		content: 'website',

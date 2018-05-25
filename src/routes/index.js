@@ -112,7 +112,7 @@ module.exports = function (app, middleware, hotswapIds, callback) {
 		app.render.apply(app, arguments);
 	};
 
-	// Set-up for hotswapping (when NodeBB reloads)
+	// Set-up for hotswapping (when Disnut reloads)
 	pluginRouter.hotswapId = 'plugins';
 	authRouter.hotswapId = 'auth';
 
@@ -196,7 +196,7 @@ module.exports = function (app, middleware, hotswapIds, callback) {
 	app.use(relativePath, function (req, res, next) {
 		if (deprecatedPaths.some(function (path) { return req.path.startsWith(path); })) {
 			if (!warned.has(req.path)) {
-				winston.warn('[deprecated] Accessing `' + req.path.slice(1) + '` from `/` is deprecated to be REMOVED in NodeBB v1.7.0. ' +
+				winston.warn('[deprecated] Accessing `' + req.path.slice(1) + '` from `/` is deprecated to be REMOVED in Disnut v1.7.0. ' +
 				'Use `/assets' + req.path + '` to access this file.');
 				warned.add(req.path);
 			}
@@ -208,7 +208,7 @@ module.exports = function (app, middleware, hotswapIds, callback) {
 	// DEPRECATED
 	app.use(relativePath + '/api/language', function (req, res) {
 		if (!warned.has(req.path)) {
-			winston.warn('[deprecated] Accessing language files from `/api/language` is deprecated to be REMOVED in NodeBB v1.7.0. ' +
+			winston.warn('[deprecated] Accessing language files from `/api/language` is deprecated to be REMOVED in Disnut v1.7.0. ' +
 			'Use `/assets/language' + req.path + '.json` for prefetch paths.');
 			warned.add(req.path);
 		}

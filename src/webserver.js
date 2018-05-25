@@ -47,7 +47,7 @@ module.exports.server = server;
 
 server.on('error', function (err) {
 	if (err.code === 'EADDRINUSE') {
-		winston.error('NodeBB address in use, exiting...', err);
+		winston.error('Disnut address in use, exiting...', err);
 	} else {
 		winston.error(err);
 	}
@@ -90,7 +90,7 @@ module.exports.listen = function (callback) {
 			initializeNodeBB(next);
 		},
 		function (next) {
-			winston.info('NodeBB Ready');
+			winston.info('Disnut Ready');
 
 			require('./socket.io').server.emit('event:nodebb.ready', {
 				'cache-buster': meta.config['cache-buster'],
@@ -278,7 +278,7 @@ function listen(callback) {
 			process.exit();
 		}
 
-		winston.warn('[startup] If you want to start nodebb on multiple ports please use loader.js');
+		winston.warn('[startup] If you want to start disnut on multiple ports please use loader.js');
 		winston.warn('[startup] Defaulting to first port in array, ' + port[0]);
 		port = port[0];
 		if (!port) {
@@ -302,11 +302,11 @@ function listen(callback) {
 
 	args.push(function (err) {
 		if (err) {
-			winston.info('[startup] NodeBB was unable to listen on: ' + bind_address + ':' + port);
+			winston.info('[startup] Disnut was unable to listen on: ' + bind_address + ':' + port);
 			process.exit();
 		}
 
-		winston.info('NodeBB is now listening on: ' + (isSocket ? socketPath : bind_address + ':' + port));
+		winston.info('Disnut is now listening on: ' + (isSocket ? socketPath : bind_address + ':' + port));
 		if (oldUmask) {
 			process.umask(oldUmask);
 		}
@@ -318,7 +318,7 @@ function listen(callback) {
 		oldUmask = process.umask('0000');
 		module.exports.testSocket(socketPath, function (err) {
 			if (err) {
-				winston.error('[startup] NodeBB was unable to secure domain socket access (' + socketPath + ')', err);
+				winston.error('[startup] Disnut was unable to secure domain socket access (' + socketPath + ')', err);
 				throw err;
 			}
 

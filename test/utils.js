@@ -136,7 +136,7 @@ describe('Utility Methods', function () {
 	});
 
 	it('should check if url is relative', function (done) {
-		assert.equal(utils.isRelativeUrl('https://nodebb.org'), false);
+		assert.equal(utils.isRelativeUrl('https://disnut.ml'), false);
 		done();
 	});
 
@@ -240,7 +240,7 @@ describe('Utility Methods', function () {
 	});
 
 	it('should get url params', function (done) {
-		var params = utils.params({ url: 'http://nodebb.org?foo=1&bar=test&herp=2' });
+		var params = utils.params({ url: 'http://disnut.ml?foo=1&bar=test&herp=2' });
 		assert.equal(params.foo, 1);
 		assert.equal(params.bar, 'test');
 		assert.equal(params.herp, 2);
@@ -322,8 +322,8 @@ describe('Utility Methods', function () {
 		});
 
 		it('should return true if they match', function (done) {
-			target.host = 'nodebb.org';
-			reference.host = 'nodebb.org';
+			target.host = 'disnut.ml';
+			reference.host = 'disnut.ml';
 			assert(utils.isInternalURI(target, reference, ''));
 			done();
 		});

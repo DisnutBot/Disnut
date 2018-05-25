@@ -108,7 +108,7 @@ define('taskbar', ['benchpress'], function (Benchpress) {
 	}
 
 	function createTaskbar(data) {
-		var title = $('<div></div>').text(data.options.title || 'NodeBB Task').html();
+		var title = $('<div></div>').text(data.options.title || 'Disnut Task').html();
 
 		var	taskbarEl = $('<li />')
 			.addClass(data.options.className)

@@ -86,7 +86,7 @@ module.exports = function (User) {
 				User.getUserField(uid, 'username', next);
 			},
 			function (username, next) {
-				var title = meta.config.title || meta.config.browserTitle || 'NodeBB';
+				var title = meta.config.title || meta.config.browserTitle || 'Disnut';
 				translator.translate('[[email:invite, ' + title + ']]', meta.config.defaultLang, function (subject) {
 					var data = {
 						site_title: title,

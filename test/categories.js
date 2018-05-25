@@ -193,7 +193,7 @@ describe('Categories', function () {
 				cid: categoryObj.cid,
 				title: 'Test Topic Title',
 				content: 'The content of test topic',
-				tags: ['nodebb'],
+				tags: ['disnut'],
 			}, done);
 		});
 
@@ -227,13 +227,13 @@ describe('Categories', function () {
 				after: 0,
 				query: {
 					author: 'poster',
-					tag: 'nodebb',
+					tag: 'disnut',
 				},
 			}, function (err, data) {
 				assert.ifError(err);
 				assert(Array.isArray(data.topics));
 				assert.equal(data.topics[0].user.username, 'poster');
-				assert.equal(data.topics[0].tags[0].value, 'nodebb');
+				assert.equal(data.topics[0].tags[0].value, 'disnut');
 				assert.equal(data.topics[0].category.cid, categoryObj.cid);
 				done();
 			});
@@ -575,13 +575,13 @@ describe('Categories', function () {
 		it('should add tags to category whitelist', function (done) {
 			var data = {};
 			data[cid] = {
-				tagWhitelist: 'nodebb,jquery,javascript',
+				tagWhitelist: 'disnut,jquery,javascript',
 			};
 			Categories.update(data, function (err) {
 				assert.ifError(err);
 				db.getSortedSetRange('cid:' + cid + ':tag:whitelist', 0, -1, function (err, tagWhitelist) {
 					assert.ifError(err);
-					assert.deepEqual(['nodebb', 'jquery', 'javascript'], tagWhitelist);
+					assert.deepEqual(['disnut', 'jquery', 'javascript'], tagWhitelist);
 					done();
 				});
 			});
@@ -596,7 +596,7 @@ describe('Categories', function () {
 		});
 
 		it('should return true if category whitelist has tag', function (done) {
-			socketTopics.isTagAllowed({ uid: posterUid }, { tag: 'nodebb', cid: cid }, function (err, allowed) {
+			socketTopics.isTagAllowed({ uid: posterUid }, { tag: 'disnut', cid: cid }, function (err, allowed) {
 				assert.ifError(err);
 				assert(allowed);
 				done();
@@ -609,7 +609,7 @@ describe('Categories', function () {
 				cid: cid,
 				title: 'Test Topic Title',
 				content: 'The content of test topic',
-				tags: ['nodebb', 'jquery', 'notallowed'],
+				tags: ['disnut', 'jquery', 'notallowed'],
 			}, function (err, data) {
 				assert.ifError(err);
 				assert.equal(data.topicData.tags.length, 2);

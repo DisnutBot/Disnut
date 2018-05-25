@@ -73,7 +73,7 @@ function versionCheck() {
 	var compatible = semver.satisfies(version, range);
 
 	if (!compatible) {
-		winston.warn('Your version of Node.js is too outdated for NodeBB. Please update your version of Node.js.');
+		winston.warn('Your version of Node.js is too outdated for Disnut. Please update your version of Node.js.');
 		winston.warn('Recommended ' + range.green + ', '.reset + version.yellow + ' provided\n'.reset);
 	}
 }

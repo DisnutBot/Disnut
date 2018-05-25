@@ -112,7 +112,7 @@ Themes.set = function (data, callback) {
 
 				Meta.configs.setMultiple(themeData, next);
 
-				// Re-set the themes path (for when NodeBB is reloaded)
+				// Re-set the themes path (for when Disnut is reloaded)
 				Themes.setPath(config);
 			},
 			function (next) {

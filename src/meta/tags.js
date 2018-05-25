@@ -28,7 +28,7 @@ Tags.parse = function (req, data, meta, link, callback) {
 				content: 'yes',
 			}, {
 				property: 'og:site_name',
-				content: Meta.config.title || 'NodeBB',
+				content: Meta.config.title || 'Disnut',
 			}, {
 				name: 'msapplication-badge',
 				content: 'frequency=30; polling-uri=' + nconf.get('url') + '/sitemap.xml',
@@ -66,7 +66,7 @@ Tags.parse = function (req, data, meta, link, callback) {
 				defaultLinks.push({
 					rel: 'search',
 					type: 'application/opensearchdescription+xml',
-					title: utils.escapeHTML(String(Meta.config.title || Meta.config.browserTitle || 'NodeBB')),
+					title: utils.escapeHTML(String(Meta.config.title || Meta.config.browserTitle || 'Disnut')),
 					href: nconf.get('relative_path') + '/osd.xml',
 				});
 			}
@@ -122,7 +122,7 @@ Tags.parse = function (req, data, meta, link, callback) {
 			return tag;
 		});
 
-		addIfNotExists(meta, 'property', 'og:title', Meta.config.title || 'NodeBB');
+		addIfNotExists(meta, 'property', 'og:title', Meta.config.title || 'Disnut');
 
 		var ogUrl = nconf.get('url') + (req.originalUrl !== '/' ? stripRelativePath(req.originalUrl) : '');
 		addIfNotExists(meta, 'property', 'og:url', ogUrl);

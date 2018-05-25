@@ -40,7 +40,7 @@ redisModule.init = function (callback) {
 	callback = callback || function () { };
 	redisClient = redisModule.connect({}, function (err) {
 		if (err) {
-			winston.error('NodeBB could not connect to your Redis database. Redis returned the following error', err);
+			winston.error('Disnut could not connect to your Redis database. Redis returned the following error', err);
 			return callback(err);
 		}
 		redisModule.client = redisClient;
@@ -113,7 +113,7 @@ redisModule.connect = function (options, callback) {
 	if (dbIdx >= 0) {
 		cxn.select(dbIdx, function (err) {
 			if (err) {
-				winston.error('NodeBB could not select Redis database. Redis returned the following error', err);
+				winston.error('Disnut could not select Redis database. Redis returned the following error', err);
 				throw err;
 			}
 		});
@@ -139,7 +139,7 @@ redisModule.checkCompatibility = function (callback) {
 
 redisModule.checkCompatibilityVersion = function (version, callback) {
 	if (semver.lt(version, '2.8.9')) {
-		return callback(new Error('Your Redis version is not new enough to support NodeBB, please upgrade Redis to v2.8.9 or higher.'));
+		return callback(new Error('Your Redis version is not new enough to support Disnut, please upgrade Redis to v2.8.9 or higher.'));
 	}
 	callback();
 };

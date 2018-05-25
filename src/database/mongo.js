@@ -110,7 +110,7 @@ mongoModule.init = function (callback) {
 
 	mongoClient.connect(connString, connOptions, function (err, _client) {
 		if (err) {
-			winston.error('NodeBB could not connect to your Mongo database. Mongo returned the following error', err);
+			winston.error('Disnut could not connect to your Mongo database. Mongo returned the following error', err);
 			return callback(err);
 		}
 		client = _client;
@@ -185,7 +185,7 @@ mongoModule.checkCompatibility = function (callback) {
 
 mongoModule.checkCompatibilityVersion = function (version, callback) {
 	if (semver.lt(version, '2.0.0')) {
-		return callback(new Error('The `mongodb` package is out-of-date, please run `./nodebb setup` again.'));
+		return callback(new Error('The `mongodb` package is out-of-date, please run `./disnut setup` again.'));
 	}
 
 	callback();

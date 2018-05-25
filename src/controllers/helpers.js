@@ -168,7 +168,7 @@ helpers.buildBreadcrumbs = function (crumbs) {
 helpers.buildTitle = function (pageTitle) {
 	var titleLayout = meta.config.titleLayout || '{pageTitle} | {browserTitle}';
 
-	var browserTitle = validator.escape(String(meta.config.browserTitle || meta.config.title || 'NodeBB'));
+	var browserTitle = validator.escape(String(meta.config.browserTitle || meta.config.title || 'Disnut'));
 	pageTitle = pageTitle || '';
 	var title = titleLayout.replace('{pageTitle}', function () {
 		return pageTitle;

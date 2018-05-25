@@ -46,7 +46,7 @@ exports.handleErrors = function (err, req, res, next) { // eslint-disable-line n
 		},
 	};
 	var defaultHandler = function () {
-		// Display NodeBB error page
+		// Display Disnut error page
 		var status = parseInt(err.status, 10);
 		if ((status === 302 || status === 308) && err.path) {
 			return res.locals.isAPI ? res.set('X-Redirect', err.path).status(200).json(err.path) : res.redirect(err.path);
