@@ -6,7 +6,7 @@
 [![Dependency Status](https://david-dm.org/Disnut/Disnut.svg?path=install)](https://david-dm.org/Disnut/Disnut?path=install)
 [![Code Climate](https://codeclimate.com/github/Disnut/Disnut/badges/gpa.svg)](https://codeclimate.com/github/Disnut/Disnut)
 
-[**Disnut Community**](https://disnut.ml) is powered by Node.js and built on either a Redis or MongoDB database. It utilizes web sockets for instant interactions and real-time notifications. NodeBB has many modern features out of the box such as social network integration and streaming discussions, while still making sure to be compatible with older browsers.
+[**Disnut Community**](https://disnut.ml) is powered by Node.js and built on either a Redis or MongoDB database. It utilizes web sockets for instant interactions and real-time notifications. Disnut has many modern features out of the box such as social network integration and streaming discussions, while still making sure to be compatible with older browsers.
 
 Additional functionality is enabled through the use of third-party plugins.
 
@@ -44,7 +44,7 @@ It is important to ensure that your Disnut and database servers are secured. Bea
     * Use `requirepass` to secure Redis behind a password (preferably a long one)
     * Familiarise yourself with [Redis Security](http://redis.io/topics/security)
 2. Use `iptables` to secure your server from unintended open ports. In Ubuntu, `ufw` provides a friendlier interface to working with `iptables`.
-    * e.g. If your NodeBB is proxied, no ports should be open except 80 (and possibly 22, for SSH access)
+    * e.g. If your Disnut is proxied, no ports should be open except 80 (and possibly 22, for SSH access)
 
 ## License
 
