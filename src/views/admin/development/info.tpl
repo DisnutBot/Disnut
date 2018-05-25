@@ -31,7 +31,7 @@
 						<span title="[[admin/development/info:guests]]">{info.stats.onlineGuestCount}</span> /
 						<span title="[[admin/development/info:sockets]]">{info.stats.socketCount}</span>
 					</td>
-					<td>{info.git.branch}@<a href="https://github.com/NodeBB/NodeBB/commit/{info.git.hash}" target="_blank">{info.git.hash}</a></td>
+					<td>{info.git.branch}@<a href="https://github.com/Disnut/Disnut/commit/{info.git.hash}" target="_blank">{info.git.hash}</a></td>
 					<td>{info.process.memoryUsage.humanReadable} mb</td>
 					<td>{info.os.load}</td>
 					<td>{info.process.uptime}</td>

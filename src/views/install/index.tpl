@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>NodeBB Web Installer</title>
+	<title>Disnut Web Installer</title>
 
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="installer.css">
@@ -16,21 +16,21 @@
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">NodeBB</a>
+				<a class="navbar-brand" href="#">Disnut</a>
 			</div>
 
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="/">Installer</a></li>
-				<li><a href="https://docs.nodebb.org" target="_blank">Get Help</a></li>
-				<li><a href="https://community.nodebb.org" target="_blank">Community</a></li>
+				<li><a href="https://docs.disnut.com" target="_blank">Get Help</a></li>
+				<li><a href="https://disnut.com" target="_blank">Community</a></li>
 			</ul>
 		</div>
 	</nav>
 	<!-- IF !installing -->
 	<div class="container <!-- IF success -->hide<!-- ENDIF success -->">
 		<p>
-			<h1>Welcome to the NodeBB Installer</h1>
-			You are just a few steps away from launching your own NodeBB forum!
+			<h1>Welcome to the Disnut Installer</h1>
+			You are just a few steps away from launching your own Disnut forum!
 		</p>
 		<form id="install" action="/" method="post">
 			<!-- IF !skipGeneralSetup -->
@@ -45,7 +45,7 @@
 						<label for="url">Web Address (URL)</label>
 						<input type="text" class="form-control" name="url" value="<!-- IF url -->{url}<!-- ENDIF url -->" placeholder="http://localhost:4567" />
 					</div>
-					<div class="col-sm-5 help-text" data-help="This is the address that resolves to your NodeBB forum. If no port is specified, <code>4567</code> will be used."></div>
+					<div class="col-sm-5 help-text" data-help="This is the address that resolves to your Disnut forum. If no port is specified, <code>4567</code> will be used."></div>
 				</div>
 			</div>
 			<!-- END -->
@@ -111,7 +111,7 @@
 			</div>
 			<!-- ENDIF !skipDatabaseSetup -->
 
-			<button id="submit" type="submit" class="btn btn-lg btn-success">Install NodeBB <i class="working hide"></i></button>
+			<button id="submit" type="submit" class="btn btn-lg btn-success">Install Disnut <i class="working hide"></i></button>
 		</form>
 	</div>
 	<!-- ENDIF !installing -->
@@ -119,16 +119,16 @@
 	<!-- IF installing -->
 	<div id="installing" class="container">
 		<p>
-			<h1>Hang tight! Your NodeBB is being installed.</h1>
+			<h1>Hang tight! Your Disnut is being installed.</h1>
 		</p>
 	</div>
 	<!-- ENDIF installing -->
 
 	<div class="container <!-- IF !success -->hide<!-- ENDIF !success -->">
 		<p>
-			<h1>Congratulations! Your NodeBB has been set-up.</h1>
+			<h1>Congratulations! Your Disnut has been set-up.</h1>
 
-			<button id="launch" class="btn btn-lg btn-success">Launch NodeBB <i class="working hide"></i></button>
+			<button id="launch" class="btn btn-lg btn-success">Launch Disnut <i class="working hide"></i></button>
 		</p>
 	</div>
 
