@@ -1,7 +1,0 @@
-{
-	"alert.confirm-rebuild-and-restart": "Are you sure you wish to rebuild and restart Disnut?",
-	"alert.confirm-restart": "Are you sure you wish to restart Disnut?",
-
-	"acp-title": "%1 | Disnut Admin Control Panel",
-	"settings-header-contents": "Contents"
-}

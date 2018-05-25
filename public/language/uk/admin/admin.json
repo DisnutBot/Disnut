@@ -1,7 +1,0 @@
-{
-	"alert.confirm-rebuild-and-restart": "Are you sure you wish to rebuild and restart NodeBB?",
-	"alert.confirm-restart": "Ви впевнені, що бажаєте перезавантажити NodeBB?",
-
-	"acp-title": "%1 | Адмінська Панель Керування NodeBB",
-	"settings-header-contents": "Зміст"
-}
