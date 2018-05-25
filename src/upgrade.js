@@ -10,7 +10,7 @@ var db = require('./database');
 var file = require('../src/file');
 
 /*
- * Need to write an upgrade script for NodeBB? Cool.
+ * Need to write an upgrade script for Disnut? Cool.
  *
  * 1. Copy TEMPLATE to a file name of your choice. Try to be succinct.
  * 2. Open up that file and change the user-friendly name (can be longer/more descriptive than the file name)

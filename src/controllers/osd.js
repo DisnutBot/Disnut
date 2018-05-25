@@ -21,7 +21,7 @@ function generateXML() {
 				xmlns: 'http://a9.com/-/spec/opensearch/1.1/',
 				'xmlns:moz': 'http://www.mozilla.org/2006/browser/search/',
 			} },
-			{ ShortName: trimToLength(String(meta.config.title || meta.config.browserTitle || 'NodeBB'), 16) },
+			{ ShortName: trimToLength(String(meta.config.title || meta.config.browserTitle || 'Disnut'), 16) },
 			{ Description: trimToLength(String(meta.config.description || ''), 1024) },
 			{ InputEncoding: 'UTF-8' },
 			{ Image: [

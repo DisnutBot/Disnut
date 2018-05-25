@@ -13,7 +13,7 @@ define('admin/modules/instance', [
 			alert_id: 'instance_rebuild_and_restart',
 			type: 'info',
 			title: 'Rebuilding... <i class="fa fa-spin fa-refresh"></i>',
-			message: 'NodeBB is rebuilding front-end assets (css, javascript, etc).',
+			message: 'Disnut is rebuilding front-end assets (css, javascript, etc).',
 		});
 
 		$(window).one('action:reconnected', function () {
@@ -21,7 +21,7 @@ define('admin/modules/instance', [
 				alert_id: 'instance_rebuild_and_restart',
 				type: 'success',
 				title: '<i class="fa fa-check"></i> Success',
-				message: 'NodeBB has rebuilt and restarted successfully.',
+				message: 'Disnut has rebuilt and restarted successfully.',
 				timeout: 5000,
 			});
 
@@ -35,7 +35,7 @@ define('admin/modules/instance', [
 				alert_id: 'instance_rebuild_and_restart',
 				type: 'info',
 				title: 'Build Complete!... <i class="fa fa-spin fa-refresh"></i>',
-				message: 'NodeBB is restarting.',
+				message: 'Disnut is restarting.',
 			});
 		});
 	};
@@ -45,7 +45,7 @@ define('admin/modules/instance', [
 			alert_id: 'instance_restart',
 			type: 'info',
 			title: 'Restarting... <i class="fa fa-spin fa-refresh"></i>',
-			message: 'NodeBB is restarting.',
+			message: 'Disnut is restarting.',
 		});
 
 		$(window).one('action:reconnected', function () {
@@ -53,7 +53,7 @@ define('admin/modules/instance', [
 				alert_id: 'instance_restart',
 				type: 'success',
 				title: '<i class="fa fa-check"></i> Success',
-				message: 'NodeBB has restarted successfully.',
+				message: 'Disnut has restarted successfully.',
 				timeout: 5000,
 			});
 

@@ -26,7 +26,7 @@ module.exports = function (middleware) {
 				}
 				res.status(503);
 				data = {
-					site_title: meta.config.title || 'NodeBB',
+					site_title: meta.config.title || 'Disnut',
 					message: meta.config.maintenanceModeMessage,
 				};
 

@@ -18,7 +18,7 @@ describe('emailer', function () {
 	var email = 'test@example.org';
 	var language = 'en-GB';
 	var params = {
-		subject: 'Welcome to NodeBB',
+		subject: 'Welcome to Disnut',
 	};
 
 	before(function (done) {
@@ -53,7 +53,7 @@ describe('emailer', function () {
 			method: function (data, next) {
 				assert(data);
 				assert.equal(data.to, email);
-				assert.equal(data.subject, '[NodeBB] ' + params.subject);
+				assert.equal(data.subject, '[Disnut] ' + params.subject);
 
 				next(error);
 			},

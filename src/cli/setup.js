@@ -14,9 +14,9 @@ function setup(initConfig) {
 	var prestart = require('../prestart');
 	var pkg = require('../../package.json');
 
-	winston.info('NodeBB Setup Triggered via Command Line');
+	winston.info('Disnut Setup Triggered via Command Line');
 
-	console.log('\nWelcome to NodeBB v' + pkg.version + '!');
+	console.log('\nWelcome to Disnut v' + pkg.version + '!');
 	console.log('\nThis looks like a new installation, so you\'ll have to answer a few questions about your environment before we can proceed.');
 	console.log('Press enter to accept the default setting (shown in brackets).');
 
@@ -47,7 +47,7 @@ function setup(initConfig) {
 		console.log('\n' + separator + '\n');
 
 		if (err) {
-			winston.error('There was a problem completing NodeBB setup', err);
+			winston.error('There was a problem completing Disnut setup', err);
 			throw err;
 		} else {
 			if (data.hasOwnProperty('password')) {
@@ -56,7 +56,7 @@ function setup(initConfig) {
 				console.log('    Password: ' + data.password + '');
 				console.log('');
 			}
-			console.log('NodeBB Setup Completed. Run "./nodebb start" to manually start your NodeBB server.');
+			console.log('Disnut Setup Completed. Run "./disnut start" to manually start your Disnut server.');
 
 			// If I am a child process, notify the parent of the returned data before exiting (useful for notifying
 			// hosts of auto-generated username/password during headless setups)

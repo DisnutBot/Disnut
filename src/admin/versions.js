@@ -13,14 +13,14 @@ var	isPrerelease = /^v?\d+\.\d+\.\d+-.+$/;
 function getLatestVersion(callback) {
 	var headers = {
 		Accept: 'application/vnd.github.v3+json',
-		'User-Agent': encodeURIComponent('NodeBB Admin Control Panel/' + meta.config.title),
+		'User-Agent': encodeURIComponent('Disnut Admin Control Panel/' + meta.config.title),
 	};
 
 	if (versionCacheLastModified) {
 		headers['If-Modified-Since'] = versionCacheLastModified;
 	}
 
-	request('https://api.github.com/repos/NodeBB/NodeBB/tags', {
+	request('https://api.github.com/repos/Disnut/Disnut/tags', {
 		json: true,
 		headers: headers,
 	}, function (err, res, releases) {

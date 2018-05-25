@@ -39,21 +39,21 @@ function start(options) {
 	}
 	if (options.log) {
 		console.log('\n' + [
-			'Starting NodeBB with logging output'.bold,
+			'Starting Disnut with logging output'.bold,
 			'Hit '.red + 'Ctrl-C '.bold + 'to exit'.red,
-			'The NodeBB process will continue to run in the background',
-			'Use "' + './nodebb stop'.yellow + '" to stop the NodeBB server',
+			'The Disnut process will continue to run in the background',
+			'Use "' + './disnut stop'.yellow + '" to stop the Disnut server',
 		].join('\n'));
 	} else if (!options.silent) {
 		console.log('\n' + [
-			'Starting NodeBB'.bold,
-			'  "' + './nodebb stop'.yellow + '" to stop the NodeBB server',
-			'  "' + './nodebb log'.yellow + '" to view server output',
-			'  "' + './nodebb help'.yellow + '" for more commands\n'.reset,
+			'Starting Disnut'.bold,
+			'  "' + './disnut stop'.yellow + '" to stop the Disnut server',
+			'  "' + './disnut log'.yellow + '" to view server output',
+			'  "' + './disnut help'.yellow + '" for more commands\n'.reset,
 		].join('\n'));
 	}
 
-	// Spawn a new NodeBB process
+	// Spawn a new Disnut process
 	var child = fork(paths.loader, process.argv.slice(3), {
 		env: process.env,
 		cwd: dirname,
@@ -72,9 +72,9 @@ function stop() {
 	getRunningPid(function (err, pid) {
 		if (!err) {
 			process.kill(pid, 'SIGTERM');
-			console.log('Stopping NodeBB. Goodbye!');
+			console.log('Stopping Disnut. Goodbye!');
 		} else {
-			console.log('NodeBB is already stopped.');
+			console.log('Disnut is already stopped.');
 		}
 	});
 }
@@ -82,13 +82,13 @@ function stop() {
 function restart(options) {
 	getRunningPid(function (err, pid) {
 		if (!err) {
-			console.log('\nRestarting NodeBB'.bold);
+			console.log('\nRestarting Disnut'.bold);
 			process.kill(pid, 'SIGTERM');
 
 			options.silent = true;
 			start(options);
 		} else {
-			console.warn('NodeBB could not be restarted, as a running instance could not be found.');
+			console.warn('Disnut could not be restarted, as a running instance could not be found.');
 		}
 	});
 }
@@ -97,14 +97,14 @@ function status() {
 	getRunningPid(function (err, pid) {
 		if (!err) {
 			console.log('\n' + [
-				'NodeBB Running '.bold + ('(pid ' + pid.toString() + ')').cyan,
-				'\t"' + './nodebb stop'.yellow + '" to stop the NodeBB server',
-				'\t"' + './nodebb log'.yellow + '" to view server output',
-				'\t"' + './nodebb restart'.yellow + '" to restart NodeBB\n',
+				'Disnut Running '.bold + ('(pid ' + pid.toString() + ')').cyan,
+				'\t"' + './disnut stop'.yellow + '" to stop the Disnut server',
+				'\t"' + './disnut log'.yellow + '" to view server output',
+				'\t"' + './disnut restart'.yellow + '" to restart Disnut\n',
 			].join('\n'));
 		} else {
-			console.log('\nNodeBB is not running'.bold);
-			console.log('\t"' + './nodebb start'.yellow + '" to launch the NodeBB server\n'.reset);
+			console.log('\nDisnut is not running'.bold);
+			console.log('\t"' + './Disnut start'.yellow + '" to launch the Disnut server\n'.reset);
 		}
 	});
 }

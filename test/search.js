@@ -59,9 +59,9 @@ describe('Search', function () {
 						topics.post({
 							uid: phoebeUid,
 							cid: cid1,
-							title: 'nodebb mongodb bugs',
+							title: 'Disnut mongodb bugs',
 							content: 'avocado cucumber apple orange fox',
-							tags: ['nodebb', 'bug', 'plugin', 'nodebb-plugin', 'jquery'],
+							tags: ['disnut', 'bug', 'plugin', 'disnut-plugin', 'jquery'],
 						}, next);
 					},
 					function (results, next) {
@@ -73,7 +73,7 @@ describe('Search', function () {
 							cid: cid2,
 							title: 'java mongodb redis',
 							content: 'avocado cucumber carrot armadillo',
-							tags: ['nodebb', 'bug', 'plugin', 'nodebb-plugin', 'javascript'],
+							tags: ['disnut', 'bug', 'plugin', 'disnut-plugin', 'javascript'],
 						}, next);
 					},
 					function (results, next) {
@@ -158,7 +158,7 @@ describe('Search', function () {
 		search.search({
 			query: 'mongodb',
 			searchIn: 'titles',
-			hasTags: ['nodebb', 'javascript'],
+			hasTags: ['disnut', 'javascript'],
 		}, function (err, data) {
 			assert.ifError(err);
 			assert.equal(data.posts[0].tid, topic2Data.tid);
@@ -170,7 +170,7 @@ describe('Search', function () {
 		search.search({
 			query: 'mongodb',
 			searchIn: 'titles',
-			hasTags: 'nodebb,javascript',
+			hasTags: 'disnut,javascript',
 		}, function (err, data) {
 			assert.ifError(err);
 			done();

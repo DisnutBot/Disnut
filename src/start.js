@@ -58,16 +58,16 @@ start.start = function () {
 		if (err) {
 			switch (err.message) {
 			case 'schema-out-of-date':
-				winston.error('Your NodeBB schema is out-of-date. Please run the following command to bring your dataset up to spec:');
-				winston.error('    ./nodebb upgrade');
+				winston.error('Your Disnut schema is out-of-date. Please run the following command to bring your dataset up to spec:');
+				winston.error('    ./disnut upgrade');
 				break;
 			case 'dependencies-out-of-date':
-				winston.error('One or more of NodeBB\'s dependent packages are out-of-date. Please run the following command to update them:');
-				winston.error('    ./nodebb upgrade');
+				winston.error('One or more of Disnut\'s dependent packages are out-of-date. Please run the following command to update them:');
+				winston.error('    ./disnut upgrade');
 				break;
 			case 'dependencies-missing':
-				winston.error('One or more of NodeBB\'s dependent packages are missing. Please run the following command to update them:');
-				winston.error('    ./nodebb upgrade');
+				winston.error('One or more of Disnut\'s dependent packages are missing. Please run the following command to update them:');
+				winston.error('    ./disnut upgrade');
 				break;
 			default:
 				winston.error(err);
@@ -104,7 +104,7 @@ function setupConfigs() {
 
 function printStartupInfo() {
 	if (nconf.get('isPrimary') === 'true') {
-		winston.info('Initializing NodeBB v%s %s', nconf.get('version'), nconf.get('url'));
+		winston.info('Initializing Disnut v%s %s', nconf.get('version'), nconf.get('url'));
 
 		var host = nconf.get(nconf.get('database') + ':host');
 		var storeLocation = host ? 'at ' + host + (host.indexOf('/') === -1 ? ':' + nconf.get(nconf.get('database') + ':port') : '') : '';

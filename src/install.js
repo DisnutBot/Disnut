@@ -15,7 +15,7 @@ var questions = {};
 questions.main = [
 	{
 		name: 'url',
-		description: 'URL used to access this NodeBB',
+		description: 'URL used to access this Disnut',
 		default:
 			nconf.get('url') || 'http://localhost:4567',
 		pattern: /^http(?:s)?:\/\//,
@@ -23,7 +23,7 @@ questions.main = [
 	},
 	{
 		name: 'secret',
-		description: 'Please enter a NodeBB secret',
+		description: 'Please enter a Disnut secret',
 		default: nconf.get('secret') || utils.generateUUID(),
 	},
 	{
@@ -447,7 +447,7 @@ function createWelcomePost(next) {
 			Topics.post({
 				uid: 1,
 				cid: 2,
-				title: 'Welcome to your NodeBB!',
+				title: 'Welcome to your Disnut!',
 				content: content,
 			}, next);
 		} else {
@@ -547,7 +547,7 @@ install.setup = function (callback) {
 		},
 	], function (err, results) {
 		if (err) {
-			winston.warn('NodeBB Setup Aborted.\n ' + err.stack);
+			winston.warn('Disnut Setup Aborted.\n ' + err.stack);
 			process.exit(1);
 		} else {
 			var data = {};

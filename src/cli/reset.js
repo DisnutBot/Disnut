@@ -56,7 +56,7 @@ exports.reset = function (options, callback) {
 	if (!tasks.length) {
 		console.log([
 			'No arguments passed in, so nothing was reset.\n'.yellow,
-			'Use ./nodebb reset ' + '{-t|-p|-w|-s|-a}'.red,
+			'Use ./disnut reset ' + '{-t|-p|-w|-s|-a}'.red,
 			'    -t\tthemes',
 			'    -p\tplugins',
 			'    -w\twidgets',
@@ -64,8 +64,8 @@ exports.reset = function (options, callback) {
 			'    -a\tall of the above',
 			'',
 			'Plugin and theme reset flags (-p & -t) can take a single argument',
-			'    e.g. ./nodebb reset -p nodebb-plugin-mentions, ./nodebb reset -t nodebb-theme-persona',
-			'         Prefix is optional, e.g. ./nodebb reset -p markdown, ./nodebb reset -t persona',
+			'    e.g. ./disnut reset -p nodebb-plugin-mentions, ./disnut reset -t nodebb-theme-persona',
+			'         Prefix is optional, e.g. ./disnut reset -p markdown, ./disnut reset -t persona',
 		].join('\n'));
 
 		process.exit(0);
