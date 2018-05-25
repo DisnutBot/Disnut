@@ -76,6 +76,6 @@
 
 	"connection-lost": "Connection to %1 has been lost, attempting to reconnect...",
 
-	"alerts.version": "Running <strong>NodeBB v%1</strong>",
+	"alerts.version": "Running <strong>Disnut v%1</strong>",
 	"alerts.upgrade": "Upgrade to v%1"
 }
