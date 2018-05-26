@@ -217,7 +217,7 @@ function enableDefaultTheme(next) {
 			console.log('Previous theme detected, skipping enabling default theme');
 			return next(err);
 		}
-		var defaultTheme = nconf.get('defaultTheme') || 'nodebb-theme-persona';
+		var defaultTheme = nconf.get('defaultTheme') || 'nodebb-theme-disnut';
 		console.log('Enabling default theme: ' + defaultTheme);
 		meta.themes.set({
 			type: 'local',

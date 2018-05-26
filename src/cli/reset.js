@@ -64,8 +64,8 @@ exports.reset = function (options, callback) {
 			'    -a\tall of the above',
 			'',
 			'Plugin and theme reset flags (-p & -t) can take a single argument',
-			'    e.g. ./disnut reset -p nodebb-plugin-mentions, ./disnut reset -t nodebb-theme-persona',
-			'         Prefix is optional, e.g. ./disnut reset -p markdown, ./disnut reset -t persona',
+			'    e.g. ./disnut reset -p nodebb-plugin-mentions, ./disnut reset -t nodebb-theme-disnut',
+			'         Prefix is optional, e.g. ./disnut reset -p markdown, ./disnut reset -t disnut',
 		].join('\n'));
 
 		process.exit(0);
@@ -114,9 +114,9 @@ function resetTheme(themeId, callback) {
 function resetThemes(callback) {
 	meta.themes.set({
 		type: 'local',
-		id: 'nodebb-theme-persona',
+		id: 'nodebb-theme-disnut',
 	}, function (err) {
-		winston.info('[reset] Theme reset to Persona');
+		winston.info('[reset] Theme reset to Disnut Theme');
 		callback(err);
 	});
 }
