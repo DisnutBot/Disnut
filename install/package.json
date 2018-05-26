@@ -1,8 +1,8 @@
 {
-    "name": "disnut-community",
+    "name": "disnut",
     "license": "MIT",
     "description": "Disnut Community",
-    "version": "1.9.3",
+    "version": "1.0.1",
     "homepage": "https://disnut.com",
     "repository": {
         "type": "git",
