@@ -20,6 +20,7 @@ Additional functionality is enabled through the use of third-party plugins.
 ## How can I contribute?
 
 * If you are a developer, feel free to check out the source and submit pull requests.
+* If you are a designer, go and checkout here at [Frontend Repo](https://github.com/Disnut/Frontend).
 * If you know languages other than English you can help us translate Disnut. We use [Transifex](https://www.transifex.com/projects/p/disnut/) for internationalization.
 * Please don't forget to **like**, **follow**, and **star our repo**! Join our growing [community](http://disnut.ml) to keep up to date with the latest Disnut development.
 
